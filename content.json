@@ -1,0 +1,15 @@
+{
+ "cloneable": true,
+ "description": "PastePrimitively",
+ "ignore": "data/.*|.*.sh",
+ "includes": {
+  "data/users/content.json": {
+   "signers": [],
+   "signers_required": 1
+  }
+ },
+ "inner_path": "content.json",
+ "signs_required": 1,
+ "title": "PastePr",
+ "zeronet_version": "0.3.6"
+}
