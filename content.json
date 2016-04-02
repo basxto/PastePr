@@ -2,7 +2,7 @@
  "cloneable": true,
  "description": "PastePrimitively",
  "files": {},
- "ignore": "data/.*|.*.sh|..*",
+ "ignore": "data/.*|.*.sh|\\..*",
  "includes": {
   "data/users/content.json": {
    "signers": [],
