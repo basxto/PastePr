@@ -1,0 +1,29 @@
+{
+    "db_name": "PastePrimitively",
+    "db_file": "data/pastepr.db",
+    "version": 2,
+    "maps": {
+        "users/.+/data.json": {
+            "to_table": [ {"node": "paste", "table": "paste"} ],
+            "to_keyvalue": ["next_id"]
+        },
+        "users/.+/content.json": {
+            "to_keyvalue": [ "cert_user_id" ]
+        }
+    },
+    "tables": {
+        "paste": {
+            "cols": [
+                ["id", "INTEGER"],
+                ["title", "TEXT"],
+                ["content", "TEXT"],
+                ["date_added", "INTEGER"],
+                ["license", "INTEGER"],
+                ["encrypted", "BIT"],
+                ["json_id", "INTEGER REFERENCES json (json_id)"]
+            ],
+            "indexes": ["CREATE UNIQUE INDEX paste_key ON paste(id, json_id)"],
+            "schema_changed": 2
+        }
+    }
+}
